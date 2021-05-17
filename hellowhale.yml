@@ -5,7 +5,7 @@ metadata:
   name: hello-blue-whale
 spec:
   replicas: 
-  selector:2
+  selector: 2
     matchLabels:
       app: hello-whale-app
       version: blue
