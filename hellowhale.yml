@@ -4,8 +4,8 @@ kind: Deployment
 metadata:
   name: hello-blue-whale
 spec:
-  replicas: 5
-  selector:
+  replicas: 
+  selector:2
     matchLabels:
       app: hello-whale-app
       version: blue
@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: hello-whale-container
-        image: vamsijakkula/hellowhale:latest
+        image: goldmandock/hellowhale:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 80
