@@ -33,7 +33,7 @@ pipeline {
     stage('Deploy App') {
       steps {
         script {
-          kubernetesDeploy(configs: "hellowhale.yml", kubeconfigId: "/var/jenkins_home/kubeconfig/config")
+          kubernetesDeploy(configs: "hellowhale.yml", kubeconfigId: [path:'/var/jenkins_home/kubeconfig/config'])
         }
       }
     }
